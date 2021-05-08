@@ -1,0 +1,146 @@
+{% load static %}               
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap' %}" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>HPP Website</title>
+  </head>
+  <body>
+  
+    
+  
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="{% static 'images/undraw_remotely_2j6y.svg' %}" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="mb-4">
+              
+                <h1>ML Project</h1>
+              
+                <p class="mb-4">House Price Prediction.</p>
+            </div>
+            
+            <form action="{% url 'result' %}" >
+
+                {% csrf_token %}
+                
+                    <!-- 1 -->
+              <div class="form-group first">
+                <label for="fullname">Per capita crime rate</label>
+                <input type="text" class="form-control" id="CRIM" required name="CRIM">
+              </div>
+
+                    <!-- 2 -->
+              <div class="form-group">
+                <label for="email">Proportion of Residential Land zoned</label>
+                <input type="text" class="form-control" id="ZN" required name="ZN">
+              </div>
+
+                    <!-- 3 -->
+              <div class="form-group">
+                <label for="password">Proportion of non-retail business</label>
+                <input type="text" class="form-control" id="INDUS" required name="INDUS">      
+              </div>
+
+                    <!-- 4 -->
+              <div class="form-group">
+                <label for="password">Charles River dummy variable</label>
+                <input type="text" class="form-control" id="CHAS" required name="CHAS">               
+              </div>
+
+                    <!-- 5 -->
+              <div class="form-group">
+                <label for="password">Nitric Oxides concentration</label>
+                <input type="text" class="form-control" id="NOX" required name="NOX">   
+              </div>
+
+                    <!-- 6 -->
+              <div class="form-group">
+                <label for="password">Average number of rooms</label>
+                <input type="text" class="form-control" id="RM" required name="RM">               
+              </div>
+
+                    <!-- 7 -->
+              <div class="form-group">
+                <label for="password">Proportion of owner-occupied</label>
+                <input type="text" class="form-control" id="AGE" required name="AGE">
+              </div>
+
+                    <!-- 8 -->
+              <div class="form-group">
+                <label for="password">Weighted distances to five Boston employment centres</label>
+                <input type="text" class="form-control" id="DIS" required name="DIS">               
+              </div>
+
+                    <!-- 9 -->
+              <div class="form-group">
+                <label for="password">Index of accessibility to radial highways</label>
+                <input type="text" class="form-control" id="RAD" required name="RAD">               
+              </div>
+
+                    <!-- 10 -->
+              <div class="form-group">
+                <label for="password">Full-value property-tax rate</label>
+                <input type="text" class="form-control" id="TAX" required name="TAX">               
+              </div>
+
+                    <!-- 11 -->
+              <div class="form-group">
+                <label for="password">Pupil-teacher ratio by town</label>
+                <input type="text" class="form-control" id="PTRATIO" required name="PTRATIO">
+              </div>
+
+                    <!-- 12 -->
+              <div class="form-group">
+                <label for="password">Proportion of blacks by town</label>
+                <input type="text" class="form-control" id="B" required name="B">
+              </div>
+
+                    <!-- 13 -->
+              <div class="form-group last mb-4">
+                <label for="re-password">% lower status of the population</label>
+                <input type="text" class="form-control" id="LSTAT" required name="LSTAT">
+                
+              </div>
+              
+              
+
+              <input type="submit" value="Predict" class="btn btn-block btn-primary">
+              <br> <p>&copy Dev Savsani</p>
+              
+            </form>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>
